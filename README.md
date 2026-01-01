@@ -1,4 +1,4 @@
-## Swift / iOS developer
+## Swift/iOS developer
 My current project is [Trak](https://github.com/idafum/TrakCore). 
 Trak is a swift console application.
 
