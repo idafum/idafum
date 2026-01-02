@@ -1,5 +1,5 @@
 ## Swift/iOS developer
-My current project is [Trak](https://github.com/idafum/TrakCore). 
+I'm currently working on [Trak](https://github.com/idafum/TrakCore). 
 Trak is a swift console application.
 
 ## My Portfolio
