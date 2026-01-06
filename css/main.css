@@ -30,11 +30,15 @@ hr {
     margin : 10px auto;
 }
 
+#projects {
+    padding: 20px 0 30px;
+    text-align: center;
+}
+
 .project-card {
-    width: 20vw;
-    max-width: 40vw;
-    margin: 0 auto;
-    padding: 10px;
+    width: min(420px, 80vw);
+    margin: 20px auto 0;
+    padding: 16px;
 
     border-radius: 10px;
     box-shadow: 0 4px 8px grey;
@@ -65,3 +69,80 @@ hr {
     height: 50px;
 }
 
+.project-card--terminal {
+    background: #0b0f0c;
+    border: 1px solid #1f5b3a;
+    box-shadow: 0 10px 24px rgba(19, 161, 92, 0.25);
+    color: #d2f6df;
+    text-align: left;
+}
+
+.terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    background: #0f1a14;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #1f5b3a;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dot--red {
+    background: #ff5f57;
+}
+
+.terminal-dot--yellow {
+    background: #febc2e;
+}
+
+.terminal-dot--green {
+    background: #28c840;
+}
+
+.terminal-title {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #7de2a3;
+    letter-spacing: 0.05em;
+}
+
+.terminal-body {
+    padding: 16px 12px 12px;
+}
+
+.project-card--terminal h3 {
+    margin: 10px 0 6px;
+    color: #d9ffe7;
+}
+
+.project-card--terminal p {
+    color: #a8e7c4;
+    line-height: 1.5;
+}
+
+.project-card--terminal .project-logo {
+    border-radius: 8px;
+    background: rgba(15, 26, 20, 0.8);
+    padding: 6px;
+}
+
+.project-card--terminal .project-card-links button {
+    background: #0f1a14;
+    border: 1px solid #2d8c58;
+    color: #b9f7d2;
+}
+
+.project-card--terminal .project-card-links button:hover {
+    background: #173022;
+}
+
+.project-card--terminal .project-card-links button:active {
+    background: #1b3b2a;
+}
