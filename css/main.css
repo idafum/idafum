@@ -1,148 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin: 0 auto;
+    font-family: 'SF Pro Display', sans-serif;
     height: 100vh;
-    min-height: calc(100vh - 100px);
-    font-family: monospace;
-    
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "who-are-you who-are-you who-are-you who-are-you"
+    "text text text text";
+
+    grid-template-rows: 8vh 20vh 10vh 60vh;
+    grid-template-columns: repeat(4, minmax(2rem, 1fr));
 }
 
 header {
-    height: 30vh;
-    text-align: center;
+    grid-area: header;
+    border-bottom: 2px solid rgb(91, 91, 91);
 }
-header h1 {
-    font-size: 1.5rem;
-}
-header p {
-    font-size: 1rem;
-}
-img {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-hr {
-    width: 80%;
-    margin : 10px auto;
-}
-
-#projects {
-    padding: 20px 0 30px;
-    text-align: center;
-}
-
-.project-card {
-    width: min(420px, 80vw);
-    margin: 20px auto 0;
-    padding: 16px;
-
-    border-radius: 10px;
-    box-shadow: 0 4px 8px grey;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-card:hover {
-    box-shadow: 0 8px 16px rgb(37, 99, 27);
-    transform: scale(1.1);
-}
-.project-card-links {
-    margin-top: 10px;
+header .header-container {
+    height: 100%;
     display: flex;
     justify-content: space-between;
-}
-.project-card-links button {
-    background-color: grey;
-    font-family: monospace;
-}
-.project-card-links button:hover{
-    background-color: whitesmoke;
-}
-.project-card-links button:active{
-    background-color: lightgrey;
-}
-
-.project-logo {
-    width: 50px;
-    height: 50px;
-}
-
-.project-card--terminal {
-    background: #0b0f0c;
-    border: 1px solid #1f5b3a;
-    box-shadow: 0 10px 24px rgba(19, 161, 92, 0.25);
-    color: #d2f6df;
-    text-align: left;
-}
-
-.terminal-bar {
-    display: flex;
+    padding: 0.85rem;
     align-items: center;
-    gap: 6px;
-    padding: 8px 10px;
-    background: #0f1a14;
-    border-radius: 8px 8px 0 0;
-    border-bottom: 1px solid #1f5b3a;
+    margin: 0 1rem;
+}
+#logo {
+    width: 1.625rem;
+    height: 1.625rem;
 }
 
-.terminal-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
+#nav-icon {
+    width: 1.625rem;
+    height: 1.625rem;
 }
 
-.terminal-dot--red {
-    background: #ff5f57;
+.who-are-you {
+    grid-area: who-are-you;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.terminal-dot--yellow {
-    background: #febc2e;
+.who-are-you #my-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
 }
 
-.terminal-dot--green {
-    background: #28c840;
+.text {
+    grid-area: text;
+    font-size: 0.9rem;
+    letter-spacing: 0.07rem;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 1rem;
 }
 
-.terminal-title {
-    margin-left: auto;
-    font-size: 0.75rem;
-    color: #7de2a3;
-    letter-spacing: 0.05em;
-}
 
-.terminal-body {
-    padding: 16px 12px 12px;
-}
-
-.project-card--terminal h3 {
-    margin: 10px 0 6px;
-    color: #d9ffe7;
-}
-
-.project-card--terminal p {
-    color: #a8e7c4;
-    line-height: 1.5;
-}
-
-.project-card--terminal .project-logo {
-    border-radius: 8px;
-    background: rgba(15, 26, 20, 0.8);
-    padding: 6px;
-}
-
-.project-card--terminal .project-card-links button {
-    background: #0f1a14;
-    border: 1px solid #2d8c58;
-    color: #b9f7d2;
-}
-
-.project-card--terminal .project-card-links button:hover {
-    background: #173022;
-}
-
-.project-card--terminal .project-card-links button:active {
-    background: #1b3b2a;
-}
