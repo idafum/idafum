@@ -11,10 +11,21 @@
     <body>
         <!-- Header section-->
         <header>
+            <input type="checkbox" id="menu-toggle"/>
+
+
             <div class="header-container">
                 <img id="logo" src="assets/symbols/home-icon.svg"/>
-                <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
+                <label for="menu-toggle" class="nav-button">
+                    <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
+                </label>
             </div>
+
+            <nav class="nav-menu">
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
         </header>
         
         <!--Who are you?-->
@@ -22,12 +33,9 @@
             <img id="my-picture" src="assets/images/somto-headshot.webp"/>
         </div>
     
-
         <!--SOME OF MY LATEST WORK-->
-        
         <p class="text">SOME OF MY LATEST WORK</p>
         
-
         <!--Projects-->
         <section>
             <div class="project-container">

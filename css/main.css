@@ -6,7 +6,7 @@
 
 body {
     font-family: 'SF Pro Display', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     margin: 0 auto;
     display: grid;
@@ -15,13 +15,19 @@ body {
     "who-are-you who-are-you who-are-you who-are-you"
     "text text text text";
 
-    grid-template-rows: 8vh 20vh 10vh 60vh;
+    grid-template-rows: 8vh 20vh 10vh 1fr;
     grid-template-columns: repeat(4, minmax(2rem, 1fr));
 }
 
 header {
     grid-area: header;
     border-bottom: 2px solid rgb(91, 91, 91);
+    position: relative;
+    z-index: 10;
+}
+
+#menu-toggle {
+    display: none;
 }
 header .header-container {
     height: 100%;
@@ -30,15 +36,63 @@ header .header-container {
     padding: 0.85rem;
     align-items: center;
     margin: 0 1rem;
+    position: relative;
+    z-index: 3;
+    background: white;
 }
-#logo {
+#logo, #nav-icon{
     width: 1.625rem;
     height: 1.625rem;
 }
 
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 #nav-icon {
-    width: 1.625rem;
-    height: 1.625rem;
+    transition: transform 0.5s ease;
+}
+
+.nav-menu {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+
+    top: 100%;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    
+    z-index: 1;
+    pointer-events: none;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.04rem;
+}
+
+#menu-toggle:checked + .header-container .nav-button #nav-icon {
+    transform: rotate(180deg);
+}
+#menu-toggle:checked + .header-container + .nav-menu {
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .who-are-you {
@@ -46,6 +100,7 @@ header .header-container {
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .who-are-you #my-picture {
