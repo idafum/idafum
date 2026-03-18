@@ -104,7 +104,7 @@ header .header-container {
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    position: relative;
 }
 
 .who-are-you #my-picture {
@@ -114,6 +114,70 @@ header .header-container {
     filter: grayscale(100%);
 }
 
+.tech-stack-highlights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(91, 91, 91);
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 
+    minmax(2rem, 1fr)
+    minmax(2rem, 1fr)
+    minmax(2rem, 1fr)
+    minmax(2rem, 2fr)
+    minmax(2rem, 0.6fr)
+    minmax(2rem, 0.6fr)
+    minmax(2rem, 0.6fr);
+    grid-template-rows: repeat(7, 1fr);
+
+    grid-template-areas:
+    ". . . . foundation . ."
+    ". . . . . design ."
+    "name-description name-description name-description . . . development"
+    "name-description name-description name-description . . . ."
+    "name-description name-description name-description . . . version-control"
+    ". . . . . UI ."
+    ". . . . other . .";
+}
+
+.name-description {
+    grid-area: name-description;
+    font-size: 1rem;
+    
+    justify-self: center;
+    align-self: center;
+}
+
+.foundation {
+    grid-area: foundation;
+    font-size: 0.8rem;
+}
+.design {
+    grid-area: design;
+    font-size: 0.8rem;
+}
+.development {
+    grid-area: development;
+    font-size: 0.8rem;
+}
+.version-control {
+    grid-area: version-control;
+    font-size: 0.8rem;
+}
+.UI {
+    grid-area: UI;
+    font-size: 0.8rem;
+}
+.other {
+    grid-area: other;
+    font-size: 0.8rem;
+}
 .text {
     grid-area: text;
     font-size: 0.9rem;
@@ -121,6 +185,29 @@ header .header-container {
     justify-self: center;
     align-self: end;
     margin-bottom: 1rem;
+}
+
+.foundation, .design, .development {
+    align-self:end;
+    justify-self: flex-start;
+    transform-origin: bottom left;
+    transform: rotate(-30deg);
+}
+.version-control, .UI, .other {
+    align-self:start;
+    transform-origin: top left;
+    transform: rotate(30deg);
+}
+
+.foundation,
+.design,
+.development,
+.version-control,
+.UI,
+.other {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    justify-self: start;
 }
 
 
