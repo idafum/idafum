@@ -129,85 +129,61 @@ header .header-container {
     grid-template-columns: 
     minmax(2rem, 1fr)
     minmax(2rem, 1fr)
-    minmax(2rem, 1fr)
     minmax(2rem, 2fr)
-    minmax(2rem, 0.6fr)
-    minmax(2rem, 0.6fr)
-    minmax(2rem, 0.6fr);
-    grid-template-rows: repeat(7, 1fr);
+    minmax(2rem, 1fr)
+    minmax(2rem, 1fr);
+    
+    grid-template-rows: repeat(5, 1fr);
 
     grid-template-areas:
-    ". . . . foundation . ."
-    ". . . . . design ."
-    "name-description name-description name-description . . . development"
-    "name-description name-description name-description . . . ."
-    "name-description name-description name-description . . . version-control"
-    ". . . . . UI ."
-    ". . . . other . .";
+    ". . . . ."
+    ". iOS . watchOS ."
+    ". . . . ."
+    ". tvOS . macOS ."
+    ". . . . .";
 }
 
-.name-description {
-    grid-area: name-description;
+.hero-text {
     font-size: 1rem;
-    
-    justify-self: center;
     align-self: center;
-}
-
-.foundation {
-    grid-area: foundation;
-    font-size: 0.8rem;
-}
-.design {
-    grid-area: design;
-    font-size: 0.8rem;
-}
-.development {
-    grid-area: development;
-    font-size: 0.8rem;
-}
-.version-control {
-    grid-area: version-control;
-    font-size: 0.8rem;
-}
-.UI {
-    grid-area: UI;
-    font-size: 0.8rem;
-}
-.other {
-    grid-area: other;
-    font-size: 0.8rem;
-}
-.text {
-    grid-area: text;
-    font-size: 0.9rem;
-    letter-spacing: 0.07rem;
     justify-self: center;
-    align-self: end;
-    margin-bottom: 1rem;
+    letter-spacing: 0.08rem;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
-
-.foundation, .design, .development {
-    align-self:end;
-    justify-self: flex-start;
-    transform-origin: bottom left;
-    transform: rotate(-30deg);
+.iOS {
+    grid-area: iOS;
+    color: #111;
+    transform: rotate(-12deg) translateY(-8px);
+    text-shadow:
+        1px 1px 0 rgba(255,255,255,0.7),
+        4px 4px 0 rgba(160,160,160,0.6),
+        8px 8px 18px rgba(0,0,0,0.18);
 }
-.version-control, .UI, .other {
-    align-self:start;
-    transform-origin: top left;
-    transform: rotate(30deg);
+.tvOS {
+    grid-area: tvOS;
+    color: #444;
+    transform: rotate(-6deg) scale(1.15) translateX(-10px);
+    text-shadow:
+        2px 2px 0 rgba(255,255,255,0.5),
+        6px 6px 0 rgba(170,170,170,0.5),
+        12px 12px 24px rgba(0,0,0,0.16);
 }
-
-.foundation,
-.design,
-.development,
-.version-control,
-.UI,
-.other {
-    font-size: 0.8rem;
-    white-space: nowrap;
-    justify-self: start;
+.watchOS {
+    grid-area: watchOS;
+    color: #2b2b2b;
+    transform: rotate(10deg) scale(1.05) translateX(6px);
+    text-shadow:
+        2px 2px 0 rgba(255,255,255,0.6),
+        5px 5px 0 rgba(180,180,180,0.45),
+        10px 10px 20px rgba(0,0,0,0.14);
 }
-
-
+.macOS {
+    grid-area: macOS;
+    color: #000;
+    transform: rotate(8deg) scale(1.3) translateY(10px);
+    text-shadow:
+        2px 2px 0 rgba(255,255,255,0.65),
+        6px 6px 0 rgba(150,150,150,0.55),
+        14px 14px 28px rgba(0,0,0,0.2);
+}
