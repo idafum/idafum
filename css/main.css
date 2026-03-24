@@ -33,7 +33,7 @@ header .header-container {
     display: flex;
     justify-content: space-between;
     padding: 0.85rem;
-    align-items: center;
+    align-items: flex-end;
     margin: 0 1rem;
     position: relative;
     z-index: 3;
@@ -117,7 +117,7 @@ header .header-container {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 30%;
+    height: 20%;
 
     background: linear-gradient(
         to top,
@@ -140,7 +140,7 @@ header .header-container {
     width: 100%;
     height: 100%;
     
-
+    padding: 0.4rem;
     display: grid;
     grid-template-columns: 
     minmax(2rem, 1fr)
@@ -152,11 +152,11 @@ header .header-container {
     grid-template-rows: repeat(5, 1fr);
 
     grid-template-areas:
+    ". . . . ."
     ". name . . ."
     ". description . . ."
     ". . . . ."
-    ". . . . ."
-    "iOS tvOS . macOS watchOS";
+    "iOS macOS . tvOS watchOS";
 }
 
 .name, .description {
@@ -182,30 +182,30 @@ header .header-container {
     font-weight: 700;
     letter-spacing: 0.02rem;
     position: relative;
-    transform: translateY(-10%);
+    transform: translateY(-20%);
 }
 .iOS {
     grid-area: iOS;
     background: linear-gradient(135deg, #2F80ED, #56CCF2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.3));
+    display: none;   
 }
 .tvOS {
     grid-area: tvOS;
     color: #9B51E0;
-    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: none;   
 
 }
 .watchOS {
     grid-area: watchOS;
     color: #27AE60;
-    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: none;   
 }
 .macOS {
     grid-area: macOS;
     color: #F2994A;
-    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: none;   
 }
 
 .text {
