@@ -110,6 +110,7 @@ header .header-container {
     object-fit: contain;
     filter: grayscale(50%);
     z-index: 1;
+    align-items: center;
 }
 .who-are-you::after {
     content: "";
@@ -145,7 +146,7 @@ header .header-container {
     grid-template-columns: 
     minmax(2rem, 1fr)
     minmax(2rem, 1fr)
-    minmax(2rem, 2fr)
+    minmax(2rem, 3fr)
     minmax(2rem, 1fr)
     minmax(2rem, 1fr);
     
