@@ -9,26 +9,25 @@
     </head>
     
     <body>
-        <!-- Header section-->
-        <header>
-            <input type="checkbox" id="menu-toggle"/>
+        <div id="landing-page-grid">
+            <header class="page-header">
+                <input type="checkbox" id="menu-toggle"/>
 
+                <div class="header-items">
+                    <a href="index.html">
+                        <img id="logo" src="assets/symbols/home-icon.svg"/>
+                    </a>
+                    <label for="menu-toggle" class="nav-button">
+                        <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
+                    </label>
+                </div>
 
-            <div class="header-container">
-                <a href="index.html">
-                    <img id="logo" src="assets/symbols/home-icon.svg"/>
-                </a>
-                <label for="menu-toggle" class="nav-button">
-                    <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
-                </label>
-            </div>
-
-            <nav class="nav-menu">
-                <a href="about.html">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header>
+                <nav class="nav-menu">
+                    <a href="about.html">About</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </header>
         
         <!--Who are you?-->
         <div class="who-are-you">
@@ -52,5 +51,7 @@
 
             </div>
         </section>
+        </div>
+        
     </body>
 </html>

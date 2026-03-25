@@ -9,6 +9,10 @@ body {
     min-height: 100vh;
     width: 100%;
     margin: 0 auto;
+}
+
+/* Main Grid Layout for the Landing Page */
+#landing-page-grid {
     display: grid;
     grid-template-areas:
     "header header header header"
@@ -19,39 +23,38 @@ body {
     grid-template-columns: repeat(4, minmax(2rem, 1fr));
 }
 
-header {
+/* Header styles */
+.page-header {
     grid-area: header;
     position: relative;
     z-index: 10;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-#menu-toggle {
+/*Hidden checkbox for toggling the menu*/
+.page-header #menu-toggle {
     display: none;
 }
-header .header-container {
+
+/*Flex container for header contents*/
+.page-header .header-items {
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 0.85rem;
-    align-items: flex-end;
-    margin: 0 1rem;
-    position: relative;
     z-index: 3;
+    justify-content: space-between;
+    padding: 0 5rem 0 2rem;
+    align-items: center;
+    position: relative;
     background: white;
 }
 
-#logo {
-    text-align: center;
-}
+/* Logo and navigation size */
 #logo, #nav-icon{
     width: 1.625rem;
     height: 1.625rem;
 }
 
-.nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nav-button{
     cursor: pointer;
 }
 
@@ -63,6 +66,13 @@ header .header-container {
     position: absolute;
     width: 100%;
     height: 25vh;
+    top: 100%;
+    border: 2px solid #e0e0e0;
+    border-top: none;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+
 
     display: flex;
     flex-direction: column;
@@ -70,31 +80,25 @@ header .header-container {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-
     background: white;
-   
-    top: 100%;
-    transform: translateY(-100%);
-    transition: transform 0.5s ease;
-    
-    z-index: 1;
-    pointer-events: none;
 }
 
+/* TODO: Continue Nav Menu Styling */
 .nav-menu a{
     text-decoration: none;
     color: black;
     letter-spacing: 0.04rem;
 }
-
-#menu-toggle:checked + .header-container .nav-button #nav-icon {
-    transform: rotate(180deg);
+/* Using a Next Combinator selector to toggle the menu and rotate the nav-icon */
+#menu-toggle:checked + .header-items .nav-button #nav-icon {
+    transform: rotate(-180deg);
 }
-#menu-toggle:checked + .header-container + .nav-menu {
+#menu-toggle:checked + .header-items + .nav-menu {
     transform: translateY(0);
     pointer-events: auto;
 }
 
+/* STYLE: LANDING PAGE BODY */
 .who-are-you {
     grid-area: who-are-you;
     border-bottom-left-radius: 0.8rem;
@@ -215,4 +219,33 @@ header .header-container {
     justify-self: center;
     align-self: end;
     letter-spacing: 0.08rem;
+}
+
+/* STYLE: ABOUT PAGE */
+.about-page-grid {
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "page-intro page-intro page-intro page-intro"
+    "content-1 content-1 content-1 content-1"
+    "content-2 content-2 content-2 content-2";
+
+    grid-template-rows: 8vh 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(2rem, 1fr));
+}
+
+.page-intro {
+    grid-area: page-intro;
+    border: 2px solid #e0e0e0;
+    border-top: none;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+
+.content-1 {
+    grid-area: content-1;
+}
+
+.content-2 {
+    grid-area: content-2;
 }

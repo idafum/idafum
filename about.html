@@ -9,30 +9,40 @@
     </head>
     
     <body>
-        <!-- Header section-->
-        <header>
-            <input type="checkbox" id="menu-toggle"/>
+        <div class="about-page-grid">
+            <header class="page-header">
+                <input type="checkbox" id="menu-toggle"/>
+                <div class="header-items">
+                    <a href="index.html">
+                        <img id="logo" src="assets/symbols/home-icon.svg"/>
+                    </a>
+                    <label for="menu-toggle" class="nav-button">
+                        <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
+                    </label>
+                </div>
 
+                <nav class="nav-menu">
+                    <a href="about.html">About</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </header>
+            
+            <section class="page-intro">
+                <p class="page-title">about.</p>
+                <p class="page-description">I'm a software developer based in Manitoba, Canada</p>
 
-            <div class="header-container">
-                <a href="index.html">
-                    <img id="logo" src="assets/symbols/home-icon.svg"/>
-                </a>
-                <label for="menu-toggle" class="nav-button">
-                    <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
-                </label>
-            </div>
+                <p>I enjoy building pieces that come together to form systems. Like building Lego sets or designing and developing software for Apple platforms.</p>
+            </section>
+            <section class="content-1">
 
-            <nav class="nav-menu">
-                <a href="about.html">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header>
+            </section>
+            <section class="content-2">
 
-        <p class="page-title">about.</p>
-        <p class="page-description">I'm a software developer based in Manitoba, Canada</p>
+            </section>
+            
+        </div>
 
-        <p>I enjoy building pieces that come together to form systems. Like building Lego sets or designing and developing software for Apple platforms.</p>
+        
     </body>
 </html> 
