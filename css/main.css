@@ -238,31 +238,33 @@ body {
     "content-1 content-1 content-1 content-1"
     "content-2 content-2 content-2 content-2";
 
-    grid-template-rows: 8vh 25vh auto 1fr 1fr;
+    grid-template-rows: 8vh 30vh auto 1fr 1fr;
     grid-template-columns: repeat(4, minmax(2rem, 1fr));
     
 }
 
 .page-intro {
     grid-area: page-intro;
+
     border-bottom: 2px solid #e0e0e0;
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     padding: 0 2.5rem;
     box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    align-self: center;
 }
 
 .page-intro-text{
     font-family: var(--font-mono);
     font-size: 3rem;
     font-weight: 900;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    padding: 1rem 0 0.5rem 0;
 }
 
 .page-intro-description{
     font-family: var(--font-sans);
     font-weight: 200;
+    padding: 0 0 0.5rem 0;
 }
 
 .page-intro-description span {
@@ -272,7 +274,8 @@ body {
 .page-intro-blurb {
     font-family: var(--font-sans);
     font-weight: 300;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     line-height: 1.25rem;
 }
 .highlight {
