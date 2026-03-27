@@ -234,10 +234,11 @@ body {
     grid-template-areas:
     "header header header header"
     "page-intro page-intro page-intro page-intro"
+    "photo-dump photo-dump photo-dump photo-dump"
     "content-1 content-1 content-1 content-1"
     "content-2 content-2 content-2 content-2";
 
-    grid-template-rows: 8vh 1fr 1fr 1fr;
+    grid-template-rows: 8vh 25vh auto 1fr 1fr;
     grid-template-columns: repeat(4, minmax(2rem, 1fr));
     
 }
@@ -271,13 +272,32 @@ body {
 .page-intro-blurb {
     font-family: var(--font-sans);
     font-weight: 300;
-    margin: 2rem 0;
+    margin-top: 2rem;
     line-height: 1.25rem;
 }
 .highlight {
     font-weight: 500;
     opacity: 0.9;
 }
+
+.photo-dump {
+    grid-area: photo-dump;
+    position: relative;
+    padding: 0 2.5rem;
+    aspect-ratio: 16 / 6;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.photo-dump img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 0.8rem;
+    filter: grayscale(20%);
+}
+
 .content-1 {
     grid-area: content-1;
 }
