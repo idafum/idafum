@@ -1,0 +1,223 @@
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'SF Mono', SF Mono, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.about-page-grid {
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "page-intro page-intro page-intro page-intro"
+    "photo-dump photo-dump photo-dump photo-dump"
+    "content-1 content-1 content-1 content-1"
+    "content-2 content-2 content-2 content-2";
+
+    grid-template-rows: minmax(60px, 8vh) minmax(300px, 40vh) minmax(100px, 20px) 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(2rem, 1fr));  
+}
+
+/* Header styles */
+.page-header {
+    grid-area: header;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/*Hidden checkbox for toggling the menu*/
+.page-header #menu-toggle {
+    display: none;
+}
+
+/*Flex container for header contents*/
+.page-header .header-items {
+    height: 100%;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+    padding: 0 3rem 0 2rem;
+    align-items: center;
+    position: relative;
+    background: white;
+}
+
+/* Logo and navigation size */
+#logo, #nav-icon{
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.nav-button{
+    cursor: pointer;
+}
+
+#nav-icon {
+    transition: transform 0.5s ease;
+}
+
+.nav-menu {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    min-height: 120px;
+    top: 100%;
+    border-bottom: 2px solid #e0e0e0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: none;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+/* TODO: Continue Nav Menu Styling */
+.nav-menu a{
+    font-family: var(--font-mono);
+    text-decoration: none;
+    color: black;
+}
+/* Using a Next Combinator selector to toggle the menu and rotate the nav-icon */
+#menu-toggle:checked + .header-items .nav-button #nav-icon {
+    transform: rotate(-180deg);
+}
+#menu-toggle:checked + .header-items + .nav-menu {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.page-intro {
+    grid-area: page-intro;
+
+    border-bottom: 1px solid #e0e0e0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0 2.5rem;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+;
+}
+
+.page-intro-text{
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.page-intro-description{
+    font-family: var(--font-sans);
+    font-weight: 200;
+    padding: 0 0 0.5rem 0;
+}
+
+.page-intro-description span {
+    display: block;
+}
+
+.page-intro-blurb {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25rem;
+}
+.highlight {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.photo-dump {
+    grid-area: photo-dump;
+    position: relative;
+    
+    aspect-ratio: 16 / 6;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.photo-dump img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 0.8rem;
+    filter: grayscale(20%);
+}
+
+.content-1 {
+    grid-area: content-1;
+}
+
+.content-2 {
+    grid-area: content-2;
+}
+
+
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+    .about-page-grid {
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "page-intro page-intro page-intro page-intro"
+    "photo-dump photo-dump photo-dump photo-dump"
+    "content-1 content-1 content-1 content-1"
+    "content-2 content-2 content-2 content-2";
+
+    grid-template-rows: minmax(60px, 8vh) minmax(240px, 35vh) minmax(100px, 20px) 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(2rem, 1fr));  
+}
+}
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 768px;
+    }
+}
