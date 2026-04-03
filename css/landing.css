@@ -132,7 +132,6 @@ body {
     grid-area: who-are-you;
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
-    
     position: relative;
     overflow: hidden;
 }
@@ -141,7 +140,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: grayscale(20%);
+    filter: grayscale(25%);
     z-index: 1;
     align-items: center;
 }
@@ -151,11 +150,11 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 22%;
 
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.08),
         rgba(0, 0, 0, 0)
     );
 
@@ -165,7 +164,6 @@ body {
 
 .some-of-my-latest-work {
     grid-area: some-of-my-latest-work;
-    border: 1px solid #e0e0e0;
     justify-self: center;
     align-self: end;
     
@@ -174,11 +172,12 @@ body {
     font-family: var(--font-mono);
     font-size: 1em;
     letter-spacing: 0.05em;
+    color: #000000;
+    opacity: 0.8;
 }
 
 .projects {
     grid-area: projects;
-    border: 1px solid #e0e0e0;
     padding: 1rem;
     display: flex;
     flex-direction: column;
