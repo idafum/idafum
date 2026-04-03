@@ -31,9 +31,10 @@ body {
     grid-template-areas:
     "header header header header"
     "who-are-you who-are-you who-are-you who-are-you"
-    "text text text text";
+    "some-of-my-latest-work some-of-my-latest-work some-of-my-latest-work some-of-my-latest-work"
+    "projects projects projects projects";
 
-    grid-template-rows: minmax(60px, 8vh) minmax(100px, 25vh) 1fr;
+    grid-template-rows: minmax(60px, 8vh) minmax(100px, 18vh) minmax(60px, auto) minmax(100px, auto); 
     grid-template-columns: repeat(4, minmax(2rem, 1fr));
 }
 
@@ -131,7 +132,6 @@ body {
     grid-area: who-are-you;
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
-    
     position: relative;
     overflow: hidden;
 }
@@ -140,7 +140,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: grayscale(20%);
+    filter: grayscale(25%);
     z-index: 1;
     align-items: center;
 }
@@ -150,11 +150,11 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 22%;
 
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.08),
         rgba(0, 0, 0, 0)
     );
 
@@ -162,6 +162,64 @@ body {
     pointer-events: none;
 }
 
+.some-of-my-latest-work {
+    grid-area: some-of-my-latest-work;
+    justify-self: center;
+    align-self: end;
+    
+}
+.text {
+    font-family: var(--font-mono);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    color: #000000;
+    opacity: 0.8;
+}
+
+.projects {
+    grid-area: projects;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.project-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.4rem;
+    height: 300px;
+    width: 100%;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.8fr 2fr 0.5fr;
+    row-gap: 0.5rem;
+    grid-template-areas: 
+    "project-logo . ."
+    "project-hero project-hero project-hero"
+    "project-cta . project-story-cta";
+}
+
+.project-logo {
+    grid-area: project-logo;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.4rem;
+}
+.project-hero {
+    grid-area: project-hero;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.4rem;
+}
+.project-cta {
+    grid-area: project-cta;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.4rem;
+}
+.project-story-cta {
+    grid-area: project-story-cta;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.4rem;
+}
 @media (min-width: 475px) {
     .container {
         max-width: 475px;
