@@ -8,7 +8,7 @@
     "some-of-my-latest-work some-of-my-latest-work some-of-my-latest-work some-of-my-latest-work"
     "projects projects projects projects";
 
-    grid-template-rows: minmax(60px, 8vh) minmax(100px, 18vh) minmax(60px, auto) minmax(100px, auto); 
+    grid-template-rows: minmax(60px, 8vh) minmax(100px, 18vh) minmax(60px, auto) minmax(250px, auto); 
     grid-template-columns: repeat(4, minmax(2rem, 1fr));
 }
 
@@ -80,42 +80,31 @@
     grid-template-rows: auto 1fr 0.2fr;
     row-gap: 0.5rem;
     grid-template-areas: 
-    "project-logo . ."
+    "project-header . ."
     "project-hero project-hero project-hero"
     "project-cta . project-story-cta";
 }
 
-.project-logo {
-    grid-area: project-logo;
-    border-radius: 0.4rem;
-    border:1px solid #e0e0e0;
-
+.project-header {
+    grid-area: project-header;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    padding: 0.75rem;
-    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-    transition: all 0.3s ease;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;  
+}
+.project-name {
+    font-family: var(--font-sans);
+    font-weight: 700;
 }
 
-project-logo:hover {
-    border-color: #d0d0d0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-.project-logo img {
+.project-header img {
     width: 3.5rem;
     height: 3.5rem;
 }
 
-.project-logo p {
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin: 0;
-    color: #1f2937;
-}
+
 .project-hero {
     grid-area: project-hero;
     border: 1px solid #e0e0e0;
