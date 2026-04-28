@@ -73,14 +73,14 @@
     border-radius: 0.4rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    padding: 1rem;
+    
 
     display: grid;
     grid-template-columns: minmax(237px, 1fr) 1fr minmax(150px, 0.5fr);
-    grid-template-rows: minmax(60px, 8vh) minmax(250px, 40vh) 0.2fr;
+    grid-template-rows: minmax(100px, 8vh) minmax(250px, 40vh) 0.2fr;
     row-gap: 1rem;
     grid-template-areas: 
-    "project-header project-header ."
+    "project-header project-header project-header"
     "project-hero project-hero project-hero"
     "project-cta . project-story-cta";
 }
@@ -89,11 +89,15 @@
     grid-area: project-header;
     display: flex;
     flex-direction: column;
+    border-top-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
     
     justify-content: center;
     align-items: flex-start;
     gap: 0.5rem;
     padding-left: 0.5rem;
+
+    background-color: gray;
 }
 .project-name {
     font-family: var(--font-sans);
@@ -121,6 +125,14 @@
     grid-area: project-cta;
     border: 1px solid #e0e0e0;
     border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .project-story-cta {
     grid-area: project-story-cta;
@@ -155,6 +167,29 @@
 }
 
 .project-story-cta:hover img {
+    transform: translateX(3px);
+}
+
+.project-cta:hover p {
+    opacity: 0.7;
+}
+.project-cta p {
+    font-family: var(--font-mono);
+    color: black;
+    font-size: 0.7em;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.project-cta img {        
+    border: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.project-cta:hover img {
     transform: translateX(3px);
 }
 @media (min-width: 475px) {
