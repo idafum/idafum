@@ -29,24 +29,30 @@
     display: block;
 }
 
-.overlay-text {
+.curved-text {
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     font-family: var(--font-mono);
     font-size: 1em;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
     color: black;
     opacity: 0.5;
     z-index: 2;
 }
 
+.curved-text span {
+    display: inline-block;
+    transform: scale(var(--scale));
+    opacity: 0.8;
+}
+
 .left-text {
-    left: 10%;
+    left: 8%;
     text-align: left;
 }
 .right-text {
-    right: 10%;
+    right: 8%;
     text-align: right;
 }
 .some-of-my-latest-work {
