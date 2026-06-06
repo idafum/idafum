@@ -29,6 +29,26 @@
     display: block;
 }
 
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-mono);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    color: black;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.left-text {
+    left: 10%;
+    text-align: left;
+}
+.right-text {
+    right: 10%;
+    text-align: right;
+}
 .some-of-my-latest-work {
     grid-area: some-of-my-latest-work;
     width: 100%;
