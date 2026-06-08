@@ -18,6 +18,13 @@ body {
     margin: 0 auto;
 }
 
+.page-title {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 3rem;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
