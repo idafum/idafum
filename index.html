@@ -15,82 +15,47 @@
     </head>
     
     <body>
-        <div id="landing-page-grid" class="container">
-            <header class="page-header">
-                <input type="checkbox" id="menu-toggle"/>
+        <!-- Global page shell: shared header stays outside page-specific layouts. -->
+        <header class="page-header">
+            <input type="checkbox" id="menu-toggle"/>
 
-                <div class="header-items">
-                    <a href="index.html">
-                        <img id="logo" src="assets/symbols/home-icon.svg"/>
-                    </a>
-                    <label for="menu-toggle" class="nav-button">
-                        <img id="nav-icon"src="assets/symbols/nav-icon.svg"/>
-                    </label>
-                </div>
+            <div class="header-items container">
+                <a href="index.html" aria-label="Home">
+                    <img id="logo" src="assets/symbols/home-icon.svg" alt=""/>
+                </a>
+
+                <label for="menu-toggle" class="nav-button" aria-label="Open navigation menu">
+                    <img id="nav-icon" src="assets/symbols/nav-icon.svg" alt=""/>
+                </label>
 
                 <nav class="nav-menu">
                     <a href="about.html">about</a>
                     <a href="portfolio.html">projects</a>
                     <a href="#">contact</a>
                 </nav>
-            </header>
-        
-            <!--Who are you?-->
-            <div class="who-are-you">
-                <img id="my-picture" src="assets/images/somto-headshot.webp"/>
+            </div>
+        </header>
 
-                <div class="curved-text left-text">
-                    <span style="--scale: 1.2;">D</span>
-                    <span style="--scale: 1.1;">E</span>
-                    <span style="--scale: 1.0;">V</span>
-                    <span style="--scale: 0.9;">E</span>
-                    <span style="--scale: 0.8;">L</span>
-                    <span style="--scale: 0.7;">O</span>
-                    <span style="--scale: 0.6;">P</span>
-                    <span style="--scale: 0.5;">E</span>
-                    <span style="--scale: 0.4;">R</span>
+        <!-- Home page: introduce Somto first, then show one featured project. -->
+        <main class="home-page site-main container">
+            <section class="home-hero" aria-labelledby="home-hero-title">
+                <div class="home-hero-media">
+                    <img src="assets/images/somto-headshot.webp" alt="Portrait of Somtochukwu Idafum"/>
                 </div>
 
-                <div class="curved-text right-text">
-                    <span style="--scale: 0.5;">D</span>
-                    <span style="--scale: 0.6;">E</span>
-                    <span style="--scale: 0.7;">S</span>
-                    <span style="--scale: 0.8;">I</span>
-                    <span style="--scale: 0.9;">G</span>
-                    <span style="--scale: 1.0;">N</span>
-                    <span style="--scale: 1.1;">E</span>
-                    <span style="--scale: 1.2;">R</span>
+                <div class="home-hero-content">
+                    <h1 id="home-hero-title" class="home-hero-title">Somtochukwu Idafum</h1>
+                    <p class="home-hero-description">
+                        I turn operational needs into practical technology solutions. 
+                    </p>
+                    <p class="home-hero-meta">Winnipeg, Manitoba</p>
                 </div>
-            </div>
-    
-            <!--SOME OF MY LATEST WORK-->
-            <div class="some-of-my-latest-work">
-                <p class="text">MY LATEST WORK</p>
-            </div>
-        
-            <!--Projects-->
-            <div class="projects">
-               <section class="trak-card">
-                    <div class="trak-header">
-                        <img src="assets/images/Trak/trakIcon.png" alt="Trak icon"/>
-                        <p class="project-name">Trak - A Focused Study Timer</p>
-                    </div>
-                    <div class="trak-hero">
-                        <span class="trak-status">In Development</span>
-                        <p class="trak-description">Currently being built with SwiftUI</p>
-                        <p class="trak-store">Feel free to check out the source on Github or read the story.</p>
-                    </div>
-                    <a href="https://github.com/idafum/Trak-multiplatform" target="_blank" class="trak-cta">
-                       <p>View on Github</p>
-                       
-                    </a>
-                    <a href="trak.html" class="trak-story-cta">
-                        <p>about trak</p>
-                        
-                    </a>
-               </section> 
-            </div>
-        </div>
+            </section>
+
+            <section class="featured-project" aria-labelledby="featured-project-title">
+                <!-- Featured project content will show a concrete example of the work. -->
+            </section>
+        </main>
         
     </body>
 </html>
