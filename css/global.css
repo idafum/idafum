@@ -4,6 +4,10 @@
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'SF Mono', SF Mono, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+  /* Color palette */
+  --accent-color: #f3690e;
+  --accent-color-muted: rgba(243, 105, 14, 0.08);
 }
 
 * {

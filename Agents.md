@@ -23,8 +23,9 @@
 - Preview and test after implementation.
 
 ## Feature 3: Project Section
-- Feature one project clearly, starting with Trak unless we decide otherwise.
-- Include project identity, short description, status, and primary actions.
+- Done: Feature one project clearly: Microsoft SharePoint Redesign.
+- Done: Include project identity, short description, and sanitized case-study status.
+- Done: Present the project as a carousel covering problem, solution, and demo.
 - Design it so additional projects could be added later without rewriting the whole structure.
 - Preview and test after implementation.
 

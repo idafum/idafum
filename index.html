@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/landing.css">
+        <script src="js/project-carousel.js" defer></script>
         <meta charset="UTF-8">
         <title>Somtochukwu Idafum</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +54,56 @@
             </section>
 
             <section class="featured-project" aria-labelledby="featured-project-title">
-                <!-- Featured project content will show a concrete example of the work. -->
+                <div class="featured-project-heading">
+                    <div class="project-kicker-row">
+                        <p class="section-kicker">Featured project</p>
+                        <ul class="project-tags" aria-label="Project skills and tools">
+                            <li>SharePoint</li>
+                            <li>Microsoft 365</li>
+                            <li>Process Improvement</li>
+                            <li>Workflow Design</li>
+                        </ul>
+                    </div>
+                    <h2 id="featured-project-title">Microsoft SharePoint Redesign</h2>
+                    <p class="featured-project-description">
+                        A workplace systems redesign focused on clearer information flow, better team resources, and smoother day-to-day operations.
+                    </p>
+                    <p class="project-status">Sanitized case study / Internal systems</p>
+                </div>
+
+                <div class="project-carousel" data-carousel>
+                    <div class="carousel-viewport">
+                        <article class="carousel-slide" data-carousel-slide>
+                            <p class="slide-step">01 / Problem</p>
+                            <h3>Important resources were harder to find than they needed to be.</h3>
+                            <p>
+                                The team needed a clearer SharePoint experience that made common resources, updates, and workflows easier to access.
+                            </p>
+                        </article>
+
+                        <article class="carousel-slide" data-carousel-slide>
+                            <p class="slide-step">02 / Solution</p>
+                            <h3>Restructure the site around how the team actually works.</h3>
+                            <p>
+                                I reorganized the experience around practical navigation, cleaner page structure, and better pathways to everyday tools.
+                            </p>
+                        </article>
+
+                        <article class="carousel-slide" data-carousel-slide>
+                            <p class="slide-step">03 / Demo</p>
+                            <h3>A sanitized walkthrough can show the redesigned flow.</h3>
+                            <p>
+                                The public version can use approved mockups or simplified screenshots to demonstrate the structure without exposing internal content.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-controls" aria-label="Project carousel controls">
+                        <button class="carousel-button" type="button" data-carousel-previous aria-label="Previous slide">Prev</button>
+                        <div class="carousel-dots" data-carousel-dots aria-label="Carousel slide selector"></div>
+                        <button class="carousel-button" type="button" data-carousel-next aria-label="Next slide">Next</button>
+                    </div>
+                </div>
             </section>
         </main>
         
