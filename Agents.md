@@ -14,20 +14,25 @@
 - Done: Define the header content: home mark, navigation links, and mobile menu behavior.
 - Done: Make the header responsive across mobile and desktop.
 - Done: Keep the shared header structure easy to reuse on other pages later.
-- Preview and test after implementation.
+- Done: Preview and test after implementation.
 
 ## Feature 2: Hero
 - Done: Define the main first impression: image, name/title, short positioning text, and optional visual treatment.
 - Done: Make the layout work cleanly on narrow mobile screens and wider desktop screens.
 - Done: Keep the HTML semantic and the styling maintainable.
-- Preview and test after implementation.
+- Done: Preview and test after implementation.
 
 ## Feature 3: Project Section
 - Done: Feature one project clearly: Microsoft SharePoint Redesign.
 - Done: Include project identity, short description, and sanitized case-study status.
-- Done: Present the project as a carousel covering problem, solution, and demo.
-- Design it so additional projects could be added later without rewriting the whole structure.
-- Preview and test after implementation.
+- Done: Present the project as a carousel covering problem, approach, and solution.
+- Done: Design it so additional projects could be added later without rewriting the whole structure.
+- Done: Preview and test after implementation.
+
+## Cleanup Pass
+- Done: Add reusable design variables in `global.css`.
+- Done: Replace repeated home page colors, spacing, borders, and radii with shared variables.
+- Done: Keep the current home page structure focused on header, hero, and one project card.
 
 ## Responsive Testing Checklist
 - Mobile: around 375px wide.
