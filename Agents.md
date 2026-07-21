@@ -40,6 +40,17 @@
 - The home page has a sticky global header and a hero with image/name/description/location, an inline Apple logo after "Apple platform applications", a `Read more` link to `about.html`, and a `See my projects` link to `portfolio.html`.
 - Project details should live on the dedicated projects page rather than the home page.
 
+## About Page Plan
+- Purpose: make the About page function as a structured, resume-readable page for humans and hiring tools.
+- Do not duplicate the home page profile summary; the hero already handles the short introduction.
+- Do not include full Projects or Contact sections; those should live on dedicated pages.
+- Section 1: Education.
+- Section 2: Work Experience.
+- Section 3: Skills.
+- Section 4: Certifications / Training.
+- Use semantic HTML sections and real text so AI hiring tools can scan the content.
+- Keep the design consistent with `global.css` variables and the current portfolio direction.
+
 ## Responsive Testing Checklist
 - Mobile: around 375px wide.
 - Larger mobile / small tablet: around 640px wide.
