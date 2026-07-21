@@ -43,6 +43,7 @@
 
   /* Typography */
   --project-title: clamp(1rem, 9vw, 2rem);
+  
 }
 
 * {
