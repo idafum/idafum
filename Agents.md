@@ -47,7 +47,7 @@
 - Section 1: Education.
 - Section 2: Work Experience.
 - Section 3: Skills.
-- Section 4: Certifications / Training.
+- Certifications / Training is intentionally omitted for now until there is content to add.
 - Use semantic HTML sections and real text so AI hiring tools can scan the content.
 - Keep the design consistent with `global.css` variables and the current portfolio direction.
 
