@@ -18,3 +18,15 @@
     letter-spacing: -0.05em;
     color: var(--color-text-strong);
 }
+
+.projects-intro p {
+    max-width: 38rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.6;
+    color: var(--color-text-medium);
+}
+
+.project-intro strong {
+    font-weight: 600;
+    color: var(--color-text-strong);
+}
