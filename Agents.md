@@ -51,6 +51,25 @@
 - Use semantic HTML sections and real text so AI hiring tools can scan the content.
 - Keep the design consistent with `global.css` variables and the current portfolio direction.
 
+## Projects Page Plan
+- Purpose: replace the `portfolio.html` placeholder with a focused, semantic overview of Somto's project work.
+- Keep the existing shared global header and navigation structure.
+- Start with HTML and content structure only; do not add projects-page CSS until the rendered HTML structure is reviewed and approved.
+- Use a page introduction followed by one semantic projects section containing four project articles.
+- The projects section has no separate visible heading; each project article uses an `h2` directly beneath the page `h1`.
+- Keep the projects in this order:
+  1. Risk and Compliance SharePoint Hub.
+  2. Trak CLI.
+  3. Combat Critters Desktop App.
+  4. Mobile Incident Reporting System.
+- Mark Mobile Incident Reporting System as `In development` in visible text.
+- Give each project a heading and short summary in the initial structure.
+- Add project-specific metadata, technology lists, images, and links only when their real content and destinations are confirmed; do not invent placeholders.
+- HTML phase: Done; the semantic structure and heading hierarchy are approved.
+- CSS phase: In progress as a guided exercise. Somto writes each agreed styling step, then the result is inspected and previewed before continuing.
+- CSS step 1: Pending; create and connect a page-specific stylesheet, then establish the projects page's outer width and spacing.
+- Preview and test each approved phase at the widths in the Responsive Testing Checklist.
+
 ## Responsive Testing Checklist
 - Mobile: around 375px wide.
 - Larger mobile / small tablet: around 640px wide.
