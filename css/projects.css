@@ -1,0 +1,10 @@
+/*Establishing the page shell*/
+.projects-page {
+    max-width: 72rem;
+    padding: var(--space-8) var(--space-4) var(--space-16);
+}
+
+.page-intro {
+    max-width: 42rem;
+    margin-bottom: var(--space-12);
+}
