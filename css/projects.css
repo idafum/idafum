@@ -4,7 +4,17 @@
     padding: var(--space-8) var(--space-4) var(--space-16);
 }
 
-.page-intro {
+.projects-intro {
     max-width: 42rem;
     margin-bottom: var(--space-12);
+
+    display: grid;
+    gap: var(--space-4);
+}
+
+.projects-intro h1 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    color: var(--color-text-strong);
 }
