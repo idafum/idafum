@@ -71,7 +71,7 @@
 - CSS step 2: Done; the introduction has fluid typography, readable spacing, and semantic emphasis for key phrases.
 - CSS step 3: Done; the mobile-first project list has consistent gaps, padding, borders, radii, and surfaces.
 - CSS step 4: Done; project titles, descriptions, and the development status label have an approved visual hierarchy.
-- CSS step 5: Done; the list uses one column on mobile and two equal columns from 768px upward.
+- CSS step 5: Superseded; every enhanced project card now receives its own full-width row at all viewport sizes.
 - Preview and test each approved phase at the widths in the Responsive Testing Checklist.
 
 ## Project Card Enhancement Plan
@@ -89,6 +89,7 @@
 - Phase 6 — Mobile Incident Reporting System: add confirmed skills/tools while retaining the visible `In development` status; do not add private source links or unfinished visuals unless explicitly approved.
 - Phase 7 — Responsive and accessibility QA: test media cropping, text wrapping, link focus states, touch targets, reduced-motion behavior, and card balance at all checklist widths.
 - Build and preview one project enhancement at a time, starting with shared HTML and then the SharePoint card.
+- Project list layout decision: keep a single-column sequence on desktop as well as mobile because every card will contain richer content, links, and optional media. Use a small accent divider between cards.
 - SharePoint content inventory confirmed: Microsoft SharePoint, Microsoft 365, Information Architecture, UI/UX Design, Workflow Design, Process Improvement, Requirements Gathering, Stakeholder Communication, Documentation, Task Management, and Microsoft Planner.
 - SharePoint HTML status: skills/tools structure is implemented with a deliberately shortened five-item list.
 - SharePoint visual direction: use a light neutral card, restrained SharePoint-teal accent, and an official local SharePoint logo asset; reject the full dark teal gradient because it overpowers the project grid.
@@ -96,6 +97,17 @@
 - SharePoint context confirmed: the hub was developed as an internal workplace project at IKEA Winnipeg.
 - SharePoint confidentiality boundary: employer attribution and a high-level outcome are allowed, but no screenshots, internal links, private documents, employee information, or operational details should be exposed.
 - SharePoint enhancement status: add the logo to the card, remove the rejected dark-gradient rules, and implement the revised light-card styling.
+- Trak CLI repository confirmed: `https://github.com/idafum/Trak`.
+- Trak CLI verified description: a terminal-first, offline CLI study tracker for developers and students that tracks focused sessions locally; current support is macOS 13+, with Linux support planned.
+- Trak CLI verified implementation: Swift package using Swift Argument Parser, Noora, and Figlet.
+- Trak CLI demo confirmed: `trakcli-demo.gif` is referenced by the repository README.
+- Existing local Trak icon/logo files are obsolete and must not be used for the portfolio card.
+- Shared card visual direction: every project receives its own accent-colored inset edge and a small project logo beside the heading when an approved logo is available.
+- Trak CLI visual direction: use the wide black-and-neon-green ASCII `TRAK` wordmark as a compact dark badge beside the heading, matching the SharePoint heading/logo structure; retire the large terminal panel.
+- Trak CLI local media: use `assets/symbols/trak-wordmark.png` (946×290). The downloaded demo GIF was removed from the portfolio because the embedded preview made the card too large.
+- Trak CLI demo decision: do not embed the GIF in the portfolio card; visitors can view it in the GitHub README. Keep the card focused on the wordmark, description, skills/tools, and repository/release links.
+- Trak CLI content status: semantic content, skills/tools, GitHub links, and wordmark are implemented.
+- Trak CLI styling status: compact heading wordmark, Trak-green inset edge, skills, and project actions are implemented.
 
 ## Responsive Testing Checklist
 - Mobile: around 375px wide.
