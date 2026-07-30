@@ -47,3 +47,10 @@
     background: var(--color-surface);
 
 }
+
+.project-card h2 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--color-text-strong);
+}

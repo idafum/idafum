@@ -69,7 +69,8 @@
 - CSS phase: In progress as a guided exercise. Somto writes each agreed styling step, then the result is inspected and previewed before continuing.
 - CSS step 1: Done; `css/projects.css` is connected after `global.css`, and the projects page has a responsive outer width and spacing.
 - CSS step 2: Done; the introduction has fluid typography, readable spacing, and semantic emphasis for key phrases.
-- CSS step 3: Pending; establish the mobile-first project-list rhythm and card boundaries.
+- CSS step 3: Done; the mobile-first project list has consistent gaps, padding, borders, radii, and surfaces.
+- CSS step 4: Pending; style project titles, descriptions, and the development status label.
 - Preview and test each approved phase at the widths in the Responsive Testing Checklist.
 
 ## Responsive Testing Checklist
