@@ -71,8 +71,31 @@
 - CSS step 2: Done; the introduction has fluid typography, readable spacing, and semantic emphasis for key phrases.
 - CSS step 3: Done; the mobile-first project list has consistent gaps, padding, borders, radii, and surfaces.
 - CSS step 4: Done; project titles, descriptions, and the development status label have an approved visual hierarchy.
-- CSS step 5: Pending; add and test the two-column project grid at desktop widths while preserving the single-column mobile layout.
+- CSS step 5: Done; the list uses one column on mobile and two equal columns from 768px upward.
 - Preview and test each approved phase at the widths in the Responsive Testing Checklist.
+
+## Project Card Enhancement Plan
+- Keep a shared information order across all cards: project identity, summary, skills/tools, optional evidence, and optional external links.
+- Do not force unavailable content into a card. Visuals and links are project-specific enhancements rather than required fields.
+- Use semantic skills/tools lists with real text so hiring tools and screen readers can parse them.
+- Open external GitHub links safely, label them clearly, and do not add a link until the exact repository URL is confirmed.
+- Phase 1 — Content inventory: confirm each project's summary, skills/tools, repository visibility and URL, available media, and confidentiality constraints.
+- Phase 2 — Shared HTML: agree on and add the semantic skills/tools and project-actions structure before adding project-specific visuals.
+- Phase 3 — SharePoint Hub: add a SharePoint-inspired color treatment without screenshots, internal URLs, employer identifiers, client data, or confidential interface details.
+- Phase 4 — Trak CLI: add a terminal-inspired treatment, confirmed skills/tools, GitHub link, and a short motion demo if available.
+- Prefer an optimized muted, looping `<video>` with a poster image over an animated GIF when source video is available; it is usually smaller and gives better playback control.
+- If an animated GIF is used, keep it short and optimized, provide meaningful alternative text or an adjacent description, and ensure the project remains understandable without motion.
+- Phase 5 — Combat Critters Desktop App: add approved app assets/screenshots, confirmed skills/tools, and its GitHub link.
+- Phase 6 — Mobile Incident Reporting System: add confirmed skills/tools while retaining the visible `In development` status; do not add private source links or unfinished visuals unless explicitly approved.
+- Phase 7 — Responsive and accessibility QA: test media cropping, text wrapping, link focus states, touch targets, reduced-motion behavior, and card balance at all checklist widths.
+- Build and preview one project enhancement at a time, starting with shared HTML and then the SharePoint card.
+- SharePoint content inventory confirmed: Microsoft SharePoint, Microsoft 365, Information Architecture, UI/UX Design, Workflow Design, Process Improvement, Requirements Gathering, Stakeholder Communication, Documentation, Task Management, and Microsoft Planner.
+- SharePoint HTML status: skills/tools structure is implemented with a deliberately shortened five-item list.
+- SharePoint visual direction: use a light neutral card, restrained SharePoint-teal accent, and an official local SharePoint logo asset; reject the full dark teal gradient because it overpowers the project grid.
+- SharePoint asset confirmed: `assets/symbols/sharepoint-logo.svg` is a local 48×48 SVG with no embedded scripts or external references.
+- SharePoint context confirmed: the hub was developed as an internal workplace project at IKEA Winnipeg.
+- SharePoint confidentiality boundary: employer attribution and a high-level outcome are allowed, but no screenshots, internal links, private documents, employee information, or operational details should be exposed.
+- SharePoint enhancement status: add the logo to the card, remove the rejected dark-gradient rules, and implement the revised light-card styling.
 
 ## Responsive Testing Checklist
 - Mobile: around 375px wide.
