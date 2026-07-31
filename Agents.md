@@ -108,6 +108,16 @@
 - Trak CLI demo decision: do not embed the GIF in the portfolio card; visitors can view it in the GitHub README. Keep the card focused on the wordmark, description, skills/tools, and repository/release links.
 - Trak CLI content status: semantic content, skills/tools, GitHub links, and wordmark are implemented.
 - Trak CLI styling status: compact heading wordmark, Trak-green inset edge, skills, and project actions are implemented.
+- Combat Critters desktop repository confirmed: `https://github.com/InternetEnemies/combatcritters-maui`.
+- Combat Critters role confirmed: Somto built the desktop frontend for the game-content administration application.
+- Combat Critters verified stack: .NET 8, .NET MAUI, C#, XAML, Mac Catalyst 13.1+, CommunityToolkit.Maui, CommunityToolkit.Mvvm, and the CombatCrittersSharp package; the project contains page/view-model separation consistent with MVVM-oriented architecture.
+- Combat Critters verified purpose: administrators manage characters, cards, abilities, packs, offers, and other game content/data.
+- Combat Critters asset source confirmed: `https://github.com/InternetEnemies/combatcritters-react` contains reusable game SVGs including `fav.svg`, `cardsTrio.svg`, `critter.svg`, and a blue `gradient.svg` background.
+- Do not use the MAUI repository app icon or splash artwork for the portfolio because they are still default .NET assets.
+- Combat Critters demo confirmed: `assets/images/combat-critters-demo.mov` is a 47-second, 1152×720 H.264 recording at 60 fps, approximately 3.4 MB, showing the administrator dashboard, character-card carousel, navigation, and pack-creation interface.
+- Combat Critters logo confirmed: `assets/images/fav.svg` is a local white critter-mark SVG with no embedded scripts or external references.
+- Combat Critters media direction: include the demo as a user-controlled video with no autoplay, a representative poster frame, accessible fallback text, and a web-compatible source format; do not use it as an animated background.
+- Combat Critters next step: approve concise card copy, visible skills/tools, repository action, selected small logo, and video treatment before implementing HTML.
 
 ## Responsive Testing Checklist
 - Mobile: around 375px wide.
