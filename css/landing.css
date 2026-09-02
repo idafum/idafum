@@ -120,7 +120,8 @@
 
 .home-hero-link {
     width: fit-content;
-    justify-self: start;
+    justify-self: end;
+    margin-right: 2.5rem;
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
@@ -200,14 +201,14 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    margin: 0;
+    margin: 0 0 0 2.5rem;
     padding: 0.7rem 1rem;
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-pill);
     background: var(--color-page);
     animation: none;
     transition: transform 0.2s ease, border-color 0.2s ease;
-    justify-self: end;
+    justify-self: start;
 }
 
 .home-scroll-cue-mobile::before {
@@ -445,6 +446,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+    }
+
+    .home-hero-link {
+        margin-right: 0;
+    }
+
+    .home-scroll-cue-mobile {
+        margin-left: 0;
     }
 
     .home-hero-link::after {
