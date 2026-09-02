@@ -74,7 +74,7 @@
     margin: 0 auto;
     font-family: var(--font-sans);
     font-size: var(--home-hero-description-font-size);
-    font-weight: 300;
+    font-weight: 350;
     line-height: 1.6;
     color: var(--color-text-medium);
 }
@@ -124,19 +124,15 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    border: 1px solid var(--color-border-strong);
+    border: 1px solid var(--accent-color);
     border-radius: var(--radius-pill);
     padding: 0.7rem 1rem;
     font-family: var(--font-mono);
     font-size: 0.78rem;
-    color: var(--color-text);
+    color: var(--color-page);
     text-decoration: none;
-    background: var(--color-page);
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        color 0.2s ease,
-        background-color 0.2s ease;
+    background: var(--accent-color);
+    transition: transform 0.2s ease;
 }
 
 .home-hero-link::after {
@@ -148,9 +144,6 @@
 
 .home-hero-link:hover {
     transform: translateX(0.25rem);
-    border-color: var(--accent-color);
-    color: var(--color-page);
-    background: var(--accent-color);
 }
 
 .home-scroll-cue {
@@ -236,10 +229,6 @@
 .home-scroll-cue-mobile:hover {
     transform: translateY(0.25rem);
     border-color: var(--accent-color);
-}
-
-.home-scroll-cue-desktop {
-    display: none;
 }
 
 .featured-projects {
@@ -460,37 +449,6 @@
 
     .home-hero-link::after {
         animation: hero-link-arrow 1.8s ease-in-out infinite;
-    }
-
-    .home-scroll-cue-mobile {
-        display: none;
-    }
-
-    .home-scroll-cue-desktop {
-        grid-column: 1 / -1;
-        justify-self: end;
-        display: inline-flex;
-        align-items: flex-start;
-        padding-bottom: 0;
-        padding-left: 3rem;
-        margin: var(--space-4) 2.5rem 0 auto;
-    }
-
-    .home-scroll-cue-desktop::before {
-        top: 0.45rem;
-        left: 0.35rem;
-        width: 2rem;
-        height: 1.4rem;
-        border-top: 2px solid currentColor;
-        border-left: 2px solid currentColor;
-        border-radius: 1.25rem 0 0 0;
-        transform: none;
-    }
-
-    .home-scroll-cue-desktop::after {
-        top: 1.48rem;
-        left: 0.08rem;
-        transform: rotate(45deg);
     }
 
     .featured-projects {
