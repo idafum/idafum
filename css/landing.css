@@ -1,4 +1,8 @@
 /* Home page layout starts with an identity-first hero. */
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --home-hero-title-font-size: clamp(1rem, 5vw, 2rem);
     --home-hero-description-font-size: clamp(0.9rem, 3vw, 1.2rem);
@@ -236,7 +240,9 @@
 }
 
 .featured-projects {
+    min-height: calc(100svh - var(--header-height-mobile));
     display: grid;
+    align-content: start;
     gap: var(--space-6);
     margin: 0 var(--space-4) var(--space-16);
     scroll-margin-top: var(--header-height-mobile);
@@ -483,6 +489,7 @@
     }
 
     .featured-projects {
+        min-height: calc(100svh - var(--header-height-desktop));
         margin-right: var(--space-8);
         margin-left: var(--space-8);
         scroll-margin-top: var(--header-height-desktop);
@@ -491,6 +498,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .home-hero-media,
     .home-hero-link::after,
     .home-scroll-cue,
