@@ -7,10 +7,10 @@
         <title>Somtochukwu Idafum</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Somtochukwu Idafum">
-        <meta name="description" content="Currently using technology to make everyday work easier for the many people.">
+        <meta name="description" content="Using technology to make everyday work easier for the many people.">
         <meta property="og:image" content="assets/images/headshot3.webp"/>
         <meta property="og:title" content="Somtochukwu Idafum"/>
-        <meta property="og:description" content="Currently using technology to make everyday work easier for the many people."/>
+        <meta property="og:description" content="Using technology to make everyday work easier for the many people."/>
         <meta property="og:url" content="https://somtoidafum.com" />
         <meta property="og:type" content="website" />
     </head>
@@ -47,6 +47,9 @@
                             fetchpriority="high" alt="Portrait of Somtochukwu Idafum">
                     </div>
                 </div>
+                <blockquote class="home-hero-quote">
+                    <p>“Using technology to make everyday work easier for the many people.”</p>
+                </blockquote>
                 <!-- <p class="home-hero-description">
                     Right now, I'm working on building an iOS app called Risk2 using <strong class="tech-highlight">Swift</strong> and <strong class="tech-highlight">SwiftUI</strong>.
                 </p> -->
@@ -62,53 +65,41 @@
                     <h2 id="featured-projects-title">some of my latest work</h2>
                 </header>
 
-                <div class="featured-project-first">
-                    <div class="project-title">
-                        <h3>TRAK &mdash; Study Tracker</h3>
-                        <p class="project-type">command-line application</p>
+                <article class="featured-project-first" aria-labelledby="trak-title">
+                    <div class="trak-command-art" role="img" aria-label="Trak command examples: initialize a workspace, create a Swift subject, start a session, and view a report.">
+                        <div class="trak-command-lines" aria-hidden="true">
+                            <code><span>$</span> <span class="trak-command-name">trak</span> init</code>
+                            <code><span>$</span> <span class="trak-command-name">trak</span> subject create <b>Swift</b></code>
+                            <code><span>$</span> <span class="trak-command-name">trak</span> session start <b>Swift</b></code>
+                            <code><span>$</span> <span class="trak-command-name">trak</span> report</code>
+                        </div>
                     </div>
 
-                    <div class="featured-project-actions">
-                        <a
-                            class="source-code"
-                            href="https://github.com/idafum/Trak"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="View TRAK source code on GitHub"
-                        >
-                            <img src="assets/symbols/github-icon.svg" alt="">
-                            <span>View on GitHub</span>
-                        </a>
-
-                        <a
-                            class="project-link"
-                            href="https://github.com/idafum/Trak/releases"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Download the latest TRAK release"
-                        >
-                            <img src="assets/symbols/square.and.arrow.down.svg" alt="">
-                            <span>Download release</span>
-                        </a>
+                    <div class="featured-project-footer">
+                        <div class="featured-project-summary">
+                            <h3 id="trak-title" class="featured-project-title">Trak — Study Tracker</h3>
+                            <p class="featured-project-type">A command line application.</p>
+                            <ul class="featured-project-tools" aria-label="Built with">
+                                <li>Swift</li>
+                                <li>Swift Argument Parser</li>
+                            </ul>
+                        </div>
+                        <div class="featured-project-actions">
+                            <a href="https://github.com/idafum/Trak"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="View Trak source code on GitHub" title="View on GitHub">
+                                <img src="assets/symbols/github-icon.svg" alt="">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://github.com/idafum/Trak/releases"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Download the latest Trak release" title="Download release">
+                                <img src="assets/symbols/square.and.arrow.down.svg" alt="">
+                                <span>Download</span>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="featured-project-copy">
-                        <p class="catchy-question">
-                            Track your study time without leaving the terminal.
-                        </p>
-
-                        <p class="project-description">
-                            TRAK is an offline Swift CLI for organizing subjects, recording focused sessions, and reviewing study history.
-                        </p>
-
-                        <ul class="featured-project-skills" aria-label="Skills and tools used for TRAK">
-                            <li>Swift</li>
-                            <li>Swift Argument Parser</li>
-                            <li>JSON</li>
-                            <li>Swift fundamentals</li>
-                        </ul>
-                    </div>
-                </div>
+                </article>
             </section>
         </main>
         
