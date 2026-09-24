@@ -2,9 +2,10 @@
 html { scroll-behavior: smooth; }
 
 .home-page {
+    --home-gutter: clamp(1.25rem, 4vw, 3rem);
     --home-hero-title-font-size: clamp(1.4rem, 3vw, 2rem);
     max-width: 1160px;
-    padding-inline: clamp(1.25rem, 4vw, 3rem);
+    padding-inline: var(--home-gutter);
 }
 
 .home-header {
@@ -67,18 +68,23 @@ html { scroll-behavior: smooth; }
 }
 
 .home-hero {
+    /* The profile sticks within the main page as the projects scroll. */
+    display: contents;
+}
+.home-hero-profile {
+    position: sticky;
+    top: 64px;
+    z-index: 5;
     display: grid;
     grid-template-columns: minmax(0, 1fr) clamp(100px, 28vw, 120px);
-    grid-template-areas:
-        "identity portrait"
-        "description description"
-        "actions actions";
+    grid-template-areas: "identity portrait";
     align-items: center;
     gap: var(--space-6) var(--space-4);
-    padding-block: var(--space-12);
-}
-.home-hero-content {
-    display: contents;
+    margin-inline: calc(-1 * var(--home-gutter));
+    padding: var(--space-6) var(--home-gutter) var(--space-8);
+    border-radius: 0 0 50% 50% / 0 0 1.5rem 1.5rem;
+    background: var(--color-page);
+    box-shadow: 0 5px 12px rgb(0 0 0 / 0.06);
 }
 .home-hero-identity {
     grid-area: identity;
@@ -103,17 +109,6 @@ html { scroll-behavior: smooth; }
     text-wrap: balance;
 }
 .home-hero-title span { color: var(--accent-color); }
-.home-hero-description {
-    grid-area: description;
-    max-width: 40ch;
-    margin: 0;
-    padding-inline-start: var(--space-4);
-    border-inline-start: 2px solid var(--accent-color);
-    font-size: clamp(1.125rem, 2vw, 1.4rem);
-    font-style: italic;
-    line-height: 1.6;
-    color: var(--color-text-medium);
-}
 .home-hero-icon {
     width: 1rem;
     height: 1rem;
@@ -121,7 +116,7 @@ html { scroll-behavior: smooth; }
 }
 .home-hero-actions {
     grid-area: actions;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: var(--space-6);
     margin-top: var(--space-2);
@@ -139,12 +134,23 @@ html { scroll-behavior: smooth; }
 }
 .home-hero-actions a:hover { text-decoration-color: currentColor; }
 .home-hero-media {
+    position: relative;
     grid-area: portrait;
     width: 100%;
     aspect-ratio: 1;
-    border-radius: var(--radius-md);
+    border-radius: 0 0 50% 50% / 0 0 28% 28%;
     overflow: hidden;
     background: var(--color-surface);
+}
+/* Fade the stone backdrop into the page while retaining the curved base. */
+.home-hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to bottom, var(--color-page), transparent 20%),
+        linear-gradient(to right, var(--color-page), transparent 12%, transparent 88%, var(--color-page));
 }
 .home-hero-media img {
     display: block;
@@ -161,13 +167,25 @@ html { scroll-behavior: smooth; }
     display: grid;
     align-content: start;
     gap: var(--space-6);
-    margin: 0 var(--space-4) var(--space-16);
-    scroll-margin-top: var(--header-height-mobile);
+    margin: var(--space-8) 0 var(--space-16);
+    scroll-margin-top: 280px;
 }
 
+.featured-projects-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+.featured-projects-heading::before,
+.featured-projects-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-border-strong);
+}
 .featured-projects-heading h2 {
     font-family: var(--font-sans);
-    font-size: var(--home-hero-title-font-size);
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--color-text-medium);
     letter-spacing: 0.05em;
@@ -307,26 +325,26 @@ html { scroll-behavior: smooth; }
     .home-desktop-nav { display: flex; gap: var(--space-8); }
     .home-desktop-nav a { display: inline-flex; align-items: center; min-height: 44px; }
     .home-hero {
+        display: grid;
         grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-        grid-template-areas: "content portrait";
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "identity portrait" "actions portrait";
         align-items: center;
-        gap: clamp(2rem, 5vw, 5rem);
+        gap: var(--space-4) clamp(2rem, 5vw, 5rem);
         padding-block: var(--space-20);
     }
-    .home-hero-content {
-        grid-area: content;
-        display: grid;
-        justify-items: start;
-        align-content: center;
-        gap: var(--space-4);
+    .home-hero-profile {
+        display: contents;
     }
-    .home-hero-identity,
-    .home-hero-description,
-    .home-hero-actions { grid-area: auto; }
-    .home-hero-identity { gap: var(--space-4); }
+    .home-hero-identity { gap: var(--space-4); align-self: end; }
+    .home-hero-actions { display: flex; align-self: start; }
     .home-hero-title { font-size: clamp(2.75rem, 7vw, 5rem); }
-    .home-hero-description { max-width: 29ch; }
+    .featured-projects-heading { display: block; }
+    .featured-projects-heading::before,
+    .featured-projects-heading::after { display: none; }
+    .featured-projects-heading h2 { font-size: var(--home-hero-title-font-size); }
     .home-hero-media { max-width: 34rem; aspect-ratio: 0.95; border-radius: 0; }
+    .home-hero-media::after { display: none; }
     .home-hero-media img { transform: none; }
     .featured-project-actions a {
         width: auto;
@@ -353,6 +371,7 @@ html { scroll-behavior: smooth; }
 
     .featured-projects {
         min-height: calc(100svh - var(--header-height-desktop));
+        margin-top: 0;
         margin-right: var(--space-8);
         margin-left: var(--space-8);
         scroll-margin-top: var(--header-height-desktop);
