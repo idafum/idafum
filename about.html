@@ -2,119 +2,37 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/landing.css">
         <meta charset="UTF-8">
-        <title>About - Somtochukwu Idafum</title>
+        <title>Somtochukwu Idafum</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Somtochukwu Idafum">
+        <meta name="description" content="Using technology to make everyday work easier for the many people.">
+        <meta property="og:image" content="assets/images/headshot3.webp"/>
+        <meta property="og:title" content="Somtochukwu Idafum"/>
+        <meta property="og:description" content="Using technology to make everyday work easier for the many people."/>
+        <meta property="og:url" content="https://somtoidafum.com" />
+        <meta property="og:type" content="website" />
     </head>
-    
+
     <body>
-        <!-- Global page shell: shared header stays outside page-specific layouts. -->
-        <header class="page-header">
-            <input type="checkbox" id="menu-toggle"/>
-
-            <div class="header-items container">
-                <a href="index.html" aria-label="Home">
-                    <img id="logo" src="assets/symbols/home-icon.svg" alt=""/>
+        <header class="home-header">
+            <div class="home-header-inner">
+                <a class="home-mark" href="index.html" aria-label="Somto — home">
+                    <img src="assets/symbols/home-icon.svg" width="26" height="26" alt="">
                 </a>
-
-                <label for="menu-toggle" class="nav-button" aria-label="Open navigation menu">
-                    <img id="nav-icon" src="assets/symbols/nav-icon.svg" alt=""/>
-                </label>
-
-                <nav class="nav-menu">
+                <nav class="home-desktop-nav" aria-label="Primary navigation">
                     <a href="about.html">about</a>
                     <a href="portfolio.html">projects</a>
-                    <a href="#">contact</a>
                 </nav>
+                <details class="home-mobile-menu">
+                    <summary>Menu <span aria-hidden="true">＋</span></summary>
+                    <nav aria-label="Primary navigation">
+                        <a href="about.html">README</a>
+                    </nav>
+                </details>
             </div>
         </header>
-
-        <main class="about-page container">
-            <div class="about-page-actions">
-                <a class="download-resume-link" href="Somtochukwu-Idafum-Resume.docx" download>Download resume</a>
-            </div>
-
-            <section class="about-section education" aria-labelledby="education-title">
-                <div class="section-heading">
-                    <p class="section-kicker">01</p>
-                    <h2 id="education-title">Education</h2>
-                </div>
-
-                <div class="section-content">
-                    <article class="education-item">
-                        <p class="item-meta">Graduated: 2025 / Winnipeg, MB</p>
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <p>University of Manitoba</p>
-                    </article>
-                </div>
-            </section>
-            <section class="about-section experience" aria-labelledby="experience-title">
-                <div class="section-heading">
-                    <p class="section-kicker">02</p>
-                    <h2 id="experience-title">Experience</h2>
-                </div>
-                <div class="section-content">
-                    <article class="about-item experience-item">
-                        <p class="item-meta">IKEA Winnipeg / 2025-Present</p>
-                        <h3>Unit Business Risk &amp; Compliance Co-worker</h3>
-                        <p>
-                            Support workplace safety, security, compliance, and operational risk through incident investigations, CCTV review, audits, reporting, and corrective-action follow-up.
-                        </p>
-                        <p>
-                            Developed an internal SharePoint hub that centralized SOPs, incident-reporting resources, operational logs, team planning, and audit records. Also created workflow automations for recurring checklist management and archival.
-                        </p>
-                    </article>
-
-                    <article class="about-item experience-item">
-                        <p class="item-meta">IKEA Winnipeg / 2023-2025</p>
-                        <h3>Product Quality &amp; Recovery Co-worker</h3>
-                        <p>
-                            Supported product quality, recovery, inventory accuracy, documentation, and cross-department problem-solving.
-                        </p>
-                    </article>
-
-                    <article class="about-item experience-item">
-                        <p class="item-meta">IKEA Winnipeg / 2021-2023</p>
-                        <h3>Goods Flow Co-worker</h3>
-                        <p>
-                            Supported receiving, inventory movement, replenishment, warehouse operations, and workplace safety.
-                        </p>
-                    </article>
-
-                    <article class="about-item experience-item">
-                        <p class="item-meta">The Home Depot / 2022</p>
-                        <h3>Overnight Freight Associate</h3>
-                        <p>
-                            Supported overnight freight handling, product organization, and inventory replenishment.
-                        </p>
-                    </article>
-                </div>
-            </section>
-            <section class="about-section skills" aria-labelledby="skills-title">
-                <div class="section-heading">
-                    <p class="section-kicker">03</p>
-                    <h2 id="skills-title">Skills</h2>
-                </div>
-                <div class="section-content">
-                    <ul class="skill-tags" aria-label="Skills">
-                        <li class="skill-business">SharePoint</li>
-                        <li class="skill-business">Power Automate</li>
-                        <li class="skill-operations">Process Improvement</li>
-                        <li class="skill-operations">Workflow Design</li>
-                        <li class="skill-compliance">Incident Investigation</li>
-                        <li class="skill-compliance">CCTV Review</li>
-                        <li class="skill-compliance">Root-Cause Analysis</li>
-                        <li class="skill-business">Microsoft 365</li>
-                        <li class="skill-development">Swift</li>
-                        <li class="skill-development">SwiftUI</li>
-                        <li class="skill-development">REST APIs</li>
-                        <li class="skill-development">MVVM</li>
-                        <li class="skill-tooling">Git</li>
-                        <li class="skill-web">Responsive Web Design</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
     </body>
-</html> 
+
+</html>
