@@ -1,6 +1,163 @@
 
 
-/* About page: resume-readable sections with a calm portfolio layout. */
+/* Personal README page and sticky title area. */
+.readme-page {
+    --readme-gutter: clamp(1.25rem, 4vw, 3rem);
+    max-width: 1160px;
+    min-height: calc(100svh - 64px);
+    padding-inline: var(--readme-gutter);
+}
+
+.readme-heading {
+    position: sticky;
+    top: 64px;
+    z-index: 5;
+    margin-inline: calc(-1 * var(--readme-gutter));
+    padding: var(--space-6) var(--readme-gutter) var(--space-8);
+    border-radius: 0 0 50% 50% / 0 0 1.5rem 1.5rem;
+    background: var(--color-page);
+    box-shadow: 0 5px 12px rgb(0 0 0 / 0.06);
+}
+
+@media (min-width: 768px) {
+    .readme-page { min-height: calc(100svh - 72px); }
+    .readme-heading {
+        top: 72px;
+        padding-block: var(--space-12);
+    }
+}
+
+.readme-story {
+    display: grid;
+    gap: var(--space-6);
+    max-width: 48rem;
+    margin: clamp(2rem, 5vw, 4rem) auto var(--space-16);
+}
+
+.readme-story p {
+    max-width: 60ch;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.75;
+    color: var(--color-text-medium);
+}
+
+.readme-work {
+    display: grid;
+    min-width: 0;
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+}
+
+.readme-goals {
+    display: grid;
+    min-width: 0;
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--accent-color);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #fff0dc, #ffe3d5);
+    box-shadow: inset 4px 0 0 var(--accent-color);
+}
+
+.readme-linkedin,
+.readme-github {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    justify-self: start;
+    min-height: 44px;
+    color: var(--color-text-strong);
+    font-weight: 600;
+    text-underline-offset: 4px;
+}
+
+.readme-linkedin:hover,
+.readme-github:hover {
+    text-decoration-thickness: 2px;
+}
+
+.readme-linkedin:focus-visible,
+.readme-github:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+.readme-timeline-scroll {
+    min-width: 0;
+    overflow-x: auto;
+    padding-block: var(--space-2) var(--space-4);
+}
+
+.readme-timeline-scroll:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+.readme-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+    list-style: none;
+    padding-top: var(--space-2);
+}
+
+.readme-timeline li {
+    position: relative;
+    border-top: 2px solid var(--color-border-strong);
+    padding: var(--space-6) var(--space-4) 0 var(--space-2);
+}
+
+.readme-timeline li::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: var(--space-2);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-color);
+}
+
+.readme-timeline time {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.readme-timeline h3 {
+    margin-top: var(--space-2);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-text-strong);
+}
+
+.readme-timeline-current {
+    display: inline-block;
+    margin-top: var(--space-3);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-pill);
+    background: var(--accent-color-muted);
+    color: var(--color-text-strong);
+    font-size: 0.75rem;
+}
+
+.readme-education-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Retain 80% of the original 1920 × 820 image height. */
+    aspect-ratio: 1920 / 656;
+    object-fit: cover;
+    object-position: 60% 20%;
+    border-radius: var(--radius-lg);
+    filter: grayscale(20%) drop-shadow(0 5px 12px rgb(0 0 0 / 0.06));
+}
+
+/* Earlier resume section styles. */
 :root {
     --section-heading-font-size: clamp(1rem, 5vw, 2rem);
 }

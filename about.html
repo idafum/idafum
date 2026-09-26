@@ -3,8 +3,9 @@
     <head>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/landing.css">
+        <link rel="stylesheet" href="css/about.css">
         <meta charset="UTF-8">
-        <title>Somtochukwu Idafum</title>
+        <title>About — Somtochukwu Idafum</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Somtochukwu Idafum">
         <meta name="description" content="Using technology to make everyday work easier for the many people.">
@@ -22,17 +23,64 @@
                     <img src="assets/symbols/home-icon.svg" width="26" height="26" alt="">
                 </a>
                 <nav class="home-desktop-nav" aria-label="Primary navigation">
-                    <a href="about.html">about</a>
-                    <a href="portfolio.html">projects</a>
+                    <a href="about.html" aria-current="page">README</a>
                 </nav>
                 <details class="home-mobile-menu">
                     <summary>Menu <span aria-hidden="true">＋</span></summary>
                     <nav aria-label="Primary navigation">
-                        <a href="about.html">README</a>
+                        <a href="about.html" aria-current="page">README</a>
                     </nav>
                 </details>
             </div>
         </header>
+        <main class="readme-page site-main container">
+            <header class="readme-heading">
+                <h1 class="home-hero-title">about<span>.</span></h1>
+            </header>
+            <div class="readme-story">
+                <p>Originally from Nigeria <span aria-hidden="true">🇳🇬</span>, I moved to Canada <span aria-hidden="true">🇨🇦</span> as an international student at the University of Manitoba, where I graduated in 2025 with a degree in Computer Science.</p>
+                <img class="readme-education-image" src="assets/images/about-hero.jpg"
+                    width="1920" height="820" alt="Somto smiling outdoors in a graduation cap."
+                    decoding="async">
+                <section class="readme-work" aria-labelledby="readme-work-title">
+                    <header class="featured-projects-heading">
+                        <h2 id="readme-work-title">what I currently do for work</h2>
+                    </header>
+                    <p>I support a safe and secure workplace at <strong>IKEA Winnipeg</strong> through audits, incident reporting, digital systems, and security processes.</p>
+                    <div class="readme-timeline-scroll" role="region" aria-label="My IKEA timeline, scroll horizontally to explore" tabindex="0">
+                        <ol class="readme-timeline" aria-label="Roles at IKEA">
+                            <li>
+                                <time datetime="2021-02">February 2021</time>
+                                <h3>Goods Flow Out Co-worker</h3>
+                            </li>
+                            <li>
+                                <time datetime="2023-03">March 2023</time>
+                                <h3>Product Quality and Recovery Co-worker</h3>
+                            </li>
+                            <li>
+                                <time datetime="2025-08">August 2025</time>
+                                <h3>Unit Business Risk and Compliance Worker</h3>
+                                <span class="readme-timeline-current">Current role</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <a class="readme-linkedin" href="https://www.linkedin.com/in/somtochukwu-idafum-0538211a7/"
+                        target="_blank" rel="noopener noreferrer">
+                        See more on LinkedIn <span aria-hidden="true">↗</span>
+                    </a>
+                </section>
+                <section class="readme-goals" aria-labelledby="readme-goals-title">
+                    <header class="featured-projects-heading">
+                        <h2 id="readme-goals-title">what I’m working towards</h2>
+                    </header>
+                    <p>I’m working towards becoming an iOS developer, exploring how to build apps for Apple platforms.</p>
+                    <a class="readme-github" href="https://github.com/idafum"
+                        target="_blank" rel="noopener noreferrer">
+                        Check out my latest project on GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                </section>
+            </div>
+        </main>
     </body>
 
 </html>
