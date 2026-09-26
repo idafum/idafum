@@ -154,7 +154,7 @@ html { scroll-behavior: smooth; }
     height: 100%;
     object-fit: cover;
     object-position: center 75%;
-    filter: saturate(0.75) contrast(1.08);
+    filter: saturate(0.75) contrast(1.08) grayscale(20%);
     transform: scale(1.65);
     transform-origin: center 58%;
 }

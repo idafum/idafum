@@ -42,14 +42,28 @@
 }
 
 .readme-work {
+    --work-blue: #0058a3;
+    --work-yellow: #ffda1a;
+    --accent-color: var(--work-blue);
     display: grid;
     min-width: 0;
     gap: var(--space-6);
     margin-top: var(--space-8);
     padding: clamp(1rem, 3vw, 2rem);
-    border: 1px solid var(--color-border-strong);
+    border: 1px solid var(--work-blue);
     border-radius: var(--radius-lg);
-    background: var(--color-surface);
+    background: linear-gradient(135deg, #edf6ff, #f6f9ff);
+    box-shadow: inset 4px 0 0 var(--work-yellow);
+}
+
+.readme-work .featured-projects-heading h2,
+.readme-work .readme-linkedin {
+    color: var(--work-blue);
+}
+
+.readme-work .featured-projects-heading::before,
+.readme-work .featured-projects-heading::after {
+    background: var(--work-blue);
 }
 
 .readme-goals {
@@ -64,8 +78,35 @@
     box-shadow: inset 4px 0 0 var(--accent-color);
 }
 
+.readme-contact {
+    display: grid;
+    min-width: 0;
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+}
+
+.readme-email {
+    overflow-wrap: anywhere;
+}
+
+.readme-ios {
+    white-space: nowrap;
+}
+
+.readme-apple-logo {
+    display: inline-block;
+    width: auto;
+    height: 1em;
+    vertical-align: -0.1em;
+}
+
 .readme-linkedin,
-.readme-github {
+.readme-github,
+.readme-email {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
@@ -77,12 +118,14 @@
 }
 
 .readme-linkedin:hover,
-.readme-github:hover {
+.readme-github:hover,
+.readme-email:hover {
     text-decoration-thickness: 2px;
 }
 
 .readme-linkedin:focus-visible,
-.readme-github:focus-visible {
+.readme-github:focus-visible,
+.readme-email:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 4px;
 }
@@ -107,7 +150,7 @@
 
 .readme-timeline li {
     position: relative;
-    border-top: 2px solid var(--color-border-strong);
+    border-top: 2px solid var(--work-blue);
     padding: var(--space-6) var(--space-4) 0 var(--space-2);
 }
 
@@ -119,7 +162,8 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--accent-color);
+    background: var(--work-yellow);
+    border: 2px solid var(--work-blue);
 }
 
 .readme-timeline time {
@@ -140,8 +184,8 @@
     margin-top: var(--space-3);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-pill);
-    background: var(--accent-color-muted);
-    color: var(--color-text-strong);
+    background: var(--work-yellow);
+    color: var(--work-blue);
     font-size: 0.75rem;
 }
 
